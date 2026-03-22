@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Dataset Explorer</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+/* BODY */
+body{
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #2c3e50, #4ca1af);
+    margin:0;
+    color:#333;
+}
+
+/* NAVBAR */
+.navbar{
+    position:sticky;
+    top:0;
+    background: rgba(44, 62, 80, 0.9);
+    padding:15px;
+    backdrop-filter: blur(10px);
+    text-align:center;
+}
+
+.navbar a{
+    color:white;
+    text-decoration:none;
+    margin:0 20px;
+    font-weight:500;
+    transition:0.3s;
+}
+
+.navbar a:hover{
+    color:#00d4ff;
+}
+
+/* CONTAINER (FIXED) */
+.container{
+    width:90%;
+    max-width:900px;
+    margin:40px auto;
+    background: rgba(255,255,255,0.95);
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.2);
+    backdrop-filter: blur(10px);
+}
+
+/* INPUT */
+input{
+    width:100%;
+    padding:12px;
+    border-radius:8px;
+    border:1px solid #ccc;
+    outline:none;
+    margin-top:10px;
+}
+
+/* TABLE WRAPPER (IMPORTANT FOR MOBILE) */
+.table-wrapper{
+    overflow-x:auto;
+}
+
+/* TABLE */
+table{
+    width:100%;
+    margin-top:20px;
+    border-collapse:collapse;
+    min-width:600px; /* prevents breaking */
+}
+
+th{
+    background:#2c3e50;
+    color:white;
+    padding:12px;
+    text-align:left;
+}
+
+td{
+    padding:10px;
+    border-bottom:1px solid #ddd;
+}
+
+/* RISK COLORS */
+.high{color:#e74c3c;}
+.medium{color:#f39c12;}
+.low{color:#27ae60;}
+
+/* MOBILE */
+@media (max-width: 600px){
+
+    .navbar{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .navbar a{
+        margin:8px;
+        font-size:14px;
+    }
+
+    .container{
+        width:95%;
+        margin:20px auto;
+        padding:20px;
+    }
+
+    h2{
+        font-size:20px;
+        text-align:center;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="navbar">
+<a href="/">Home</a>
+<a href="/myapps">My Apps</a>
+<a href="/compare">Compare Apps</a>
+<a href="/dashboard">Dashboard</a>
+<a href="/dataset">Dataset Explorer</a>
+</div>
+
+<div class="container">
+
+<h2>Dataset Explorer</h2>
+
+<input type="text" id="searchInput" placeholder="Search App Name..." onkeyup="searchApp()">
+
+<div class="table-wrapper">
+
+<table id="appTable">
+
+<tr>
+<th>App Name</th>
+<th>Category</th>
+<th>Permission Risk</th>
+<th>Comment Risk</th>
+<th>Policy Risk</th>
+</tr>
+
+{% for row in tables %}
+
+<tr>
+<td>{{row.AppName}}</td>
+<td>{{row.Category}}</td>
+<td>{{row.Privacy_Risk_Score}}</td>
+<td>{{row.Comment_Risk_Level}}</td>
+<td>{{row.Policy_Risk_Factor}}</td>
+</tr>
+
+{% endfor %}
+
+</table>
+
+</div>
+
+</div>
+
+<script>
+
+function searchApp(){
+
+    let input=document.getElementById("searchInput");
+    let filter=input.value.toLowerCase();
+
+    let table=document.getElementById("appTable");
+    let rows=table.getElementsByTagName("tr");
+
+    for(let i=1;i<rows.length;i++){
+
+        let cell=rows[i].getElementsByTagName("td")[0];
+
+        if(cell){
+
+            let text=cell.textContent || cell.innerText;
+
+            if(text.toLowerCase().indexOf(filter)>-1){
+                rows[i].style.display="";
+            }
+            else{
+                rows[i].style.display="none";
+            }
+
+        }
+    }
+}
+
+</script>
+
+</body>
+</html>
