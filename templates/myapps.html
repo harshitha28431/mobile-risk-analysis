@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Apps Dashboard</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+
+/* BODY */
+body{
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #2c3e50, #4ca1af);
+    margin:0;
+    color:#333;
+}
+
+/* NAVBAR */
+.navbar{
+    position:sticky;
+    top:0;
+    background: rgba(44, 62, 80, 0.9);
+    padding:15px;
+    backdrop-filter: blur(10px);
+    text-align:center;
+}
+
+.navbar a{
+    color:white;
+    text-decoration:none;
+    margin:0 20px;
+    font-weight:500;
+    transition:0.3s;
+}
+
+.navbar a:hover{
+    color:#00d4ff;
+}
+
+/* CONTAINER (FIXED) */
+.container{
+    width:90%;
+    max-width:900px;
+    margin:40px auto;
+    background: rgba(255,255,255,0.95);
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.2);
+    backdrop-filter: blur(10px);
+}
+
+/* TEXTAREA */
+textarea{
+    width:100%;
+    padding:12px;
+    border-radius:8px;
+    border:1px solid #ccc;
+    outline:none;
+    margin-top:10px;
+}
+
+/* BUTTON */
+button{
+    width:100%;
+    padding:12px;
+    margin-top:15px;
+    background: linear-gradient(45deg, #007bff, #00c6ff);
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+/* TABLE WRAPPER */
+.table-wrapper{
+    overflow-x:auto;
+}
+
+/* TABLE */
+table{
+    width:100%;
+    margin-top:20px;
+    border-collapse:collapse;
+    min-width:400px;
+}
+
+th{
+    background:#2c3e50;
+    color:white;
+    padding:12px;
+    text-align:left;
+}
+
+td{
+    padding:10px;
+    border-bottom:1px solid #ddd;
+}
+
+/* RISK COLORS */
+.high{color:#e74c3c;}
+.medium{color:#f39c12;}
+.low{color:#27ae60;}
+
+/* CHART CONTAINER */
+.chart-container{
+    width:100%;
+    max-width:350px;
+    height:300px;
+    margin:30px auto;
+}
+
+/* MOBILE */
+@media (max-width: 600px){
+
+    .navbar{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .navbar a{
+        margin:8px;
+        font-size:14px;
+    }
+
+    .container{
+        width:95%;
+        margin:20px auto;
+        padding:20px;
+    }
+
+    h2{
+        font-size:20px;
+        text-align:center;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="navbar">
+<a href="/">Home</a>
+<a href="/myapps">My Apps</a>
+<a href="/compare">Compare Apps</a>
+<a href="/dashboard">Dashboard</a>
+<a href="/dataset">Dataset Explorer</a>
+</div>
+
+<div class="container">
+
+<h2>My Apps Risk Dashboard</h2>
+
+<form method="POST">
+<textarea name="app_name" rows="5" placeholder="Paste apps here"></textarea>
+<button type="submit">Analyze My Apps</button>
+</form>
+
+{% if results %}
+
+<div class="table-wrapper">
+<table>
+<tr>
+<th>App</th>
+<th>Risk %</th>
+<th>Level</th>
+</tr>
+
+{% for app in results %}
+<tr>
+<td>{{app.name}}</td>
+<td>{{app.percentage}}</td>
+<td class="{{app.level|lower}}">{{app.level}}</td>
+</tr>
+{% endfor %}
+</table>
+</div>
+
+<div class="chart-container">
+<canvas id="chart"></canvas>
+</div>
+
+<script>
+new Chart(document.getElementById("chart"), {
+    type: 'pie',
+    data: {
+        labels: ['High','Medium','Low'],
+        datasets: [{
+            data: [{{high}}, {{medium}}, {{low}}],
+            backgroundColor: ['#e74c3c','#f39c12','#27ae60']
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            legend: {
+                position: 'bottom'
+            }
+        }
+    }
+});
+</script>
+
+{% endif %}
+
+</div>
+
+</body>
+</html>
