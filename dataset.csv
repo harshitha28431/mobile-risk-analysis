@@ -1,0 +1,189 @@
+﻿AppName,packageName,Category,Dangerous_Permissions,Permissions_Count,Excessive_Permissions_Flag,Privacy_Risk_Score,User_Comments,Comment_Risk_Level,Policy_Risk_Factor
+M-Pesa,com.safaricom.mpesa,Finance,"ACCESS_FINE_LOCATION, READ_CONTACTS, SEND_SMS",25,0,3,"Very convenient for daily transactions. Some users worry about account security and SMS access, but overall trusted.",medium,high
+KCB Mobile,com.kcbgroup.mobile.app,Finance,"READ_CONTACTS, SEND_SMS, CAMERA",28,0,2,Smooth banking experience. Occasionally users mention login issues and slow verification process.,low,high
+Tala,co.tala.app,Finance,"READ_CONTACTS, READ_SMS, ACCESS_FINE_LOCATION",32,1,8,Quick loan approval process. Some users report frequent reminders and access to personal data.,high,high
+Zenka,com.zenka.loan,Finance,"READ_CONTACTS, READ_SMS, READ_PHONE_STATE",30,1,7,Fast loans but users complain about high interest rates and repeated notifications.,high,high
+Branch,com.branch.branch,Finance,"READ_CONTACTS, READ_SMS, READ_EXTERNAL_STORAGE",29,1,8,Easy to use loan app. Some concerns raised about contact access and aggressive repayment reminders,high,high
+Timiza,com.absa.mobile.android.timiza,Finance,"READ_SMS, READ_PHONE_STATE",18,0,2,Good digital banking features. A few users mention delayed transactions.,medium,high
+OKash,com.okash.loan,Finance,"READ_CONTACTS, READ_SMS, READ_CALENDAR",28,1,9,"Loan disbursement is fast, but many users report high interest and frequent calls.",high,high
+WhatsApp,com.whatsapp,Communication,"READ_CONTACTS, CAMERA, RECORD_AUDIO, ACCESS_FINE_LOCATION",38,0,1,Reliable messaging with end-to-end encryption. Some users are concerned about data sharing policies.,medium,medium
+Telegram,org.telegram.messenger,Communication,"READ_CONTACTS, RECORD_AUDIO, CAMERA",35,0,1,Fast and feature-rich messaging. Users appreciate privacy features but worry about public groups misuse,medium,medium
+Signal,org.thoughtcrime.securesms,Communication,"READ_CONTACTS, CAMERA, RECORD_AUDIO",30,0,0,Highly trusted for privacy. Users appreciate minimal data collection.,low,low
+Viber,com.viber.voip,Communication,"READ_CONTACTS, CAMERA, RECORD_AUDIO, CALL_PHONE",42,0,2,Good call quality. Some users mention too many promotional notifications.,medium,medium
+Gmail,com.google.android.gm,Communication,"READ_CONTACTS, GET_ACCOUNTS",15,0,1,Reliable email service. Users generally trust its security.,low,medium
+KPLC Selfcare,com.kplc.kplcselfcare,Utility,INTERNET,5,0,0,Helpful for checking electricity bills. Some users complain about occasional app crashes,low,low
+Flashlight,com.dev.flashlight.app,Utility,"CAMERA, INTERNET",8,1,10,Simple and works well. No major issues reported.,low,low
+QR Code Scanner,com.google.zxing.client.android,Utility,"CAMERA, VIBRATE",10,0,2,Useful tool. Some users report excessive ads,medium,medium
+Jumia,com.jumia.android,Shopping,"ACCESS_FINE_LOCATION, CAMERA, READ_EXTERNAL_STORAGE",22,0,2,Wide product range. Some complaints about delayed deliveries.,medium,medium
+Amazon Shopping,com.amazon.mShop.android.shopping,Shopping,"ACCESS_FINE_LOCATION, CAMERA, READ_PHONE_STATE",28,1,4,Trusted platform with smooth checkout. Users rarely report privacy issues.,low,medium
+AliExpress,com.alibaba.aliexpresshd,Shopping,"READ_CONTACTS, ACCESS_FINE_LOCATION, CAMERA",30,1,8,Affordable products. Some concerns about delivery times and tracking accuracy.,medium,medium
+Uber,com.ubercab,Transportation,"ACCESS_FINE_LOCATION, READ_SMS",20,0,3,Convenient ride service. Users appreciate safety features but worry about location tracking.,medium,high
+Bolt,com.taxify.client,Transportation,"ACCESS_FINE_LOCATION, READ_CONTACTS",25,1,5,Affordable rides. Some users report driver availability issues.,medium,high
+Google Maps,com.google.android.apps.maps,Navigation,"ACCESS_FINE_LOCATION, READ_CONTACTS",35,0,1,Accurate navigation. Continuous location access may raise privacy concerns for some users.,medium,high
+Waze,com.waze,Navigation,"ACCESS_FINE_LOCATION, RECORD_AUDIO, READ_CONTACTS",40,0,2,Helpful for traffic updates. Requires constant GPS usage.,medium,high
+TikTok,com.ss.android.ugc.trill,Social,"CAMERA, RECORD_AUDIO, ACCESS_FINE_LOCATION, READ_CONTACTS, GET_ACCOUNTS",55,1,9,Entertaining content. Users raise concerns about data privacy and screen time impact.,high,high
+Facebook,com.facebook.katana,Social,"READ_CONTACTS, ACCESS_FINE_LOCATION, CAMERA, RECORD_AUDIO",60,1,8,Popular social platform. Users frequently mention privacy concerns and data tracking.,high,high
+Snapchat,com.snapchat.android,Social,"CAMERA, RECORD_AUDIO, ACCESS_FINE_LOCATION, READ_CONTACTS",45,0,3,Fun messaging app. Some users concerned about location sharing features.,medium,high
+Instagram,com.instagram.android,Social,"CAMERA, READ_EXTERNAL_STORAGE, RECORD_AUDIO",48,0,3,Great for sharing photos. Users often mention targeted ads and data tracking.,high,high
+Candy Crush Saga,com.king.candycrushsaga,Gaming,"INTERNET, READ_PHONE_STATE",12,1,6,Fun casual game. Mostly safe with in-app purchases,low,low
+Clash of Clans,com.supercell.clashofclans,Gaming,"WRITE_EXTERNAL_STORAGE, READ_PHONE_STATE",15,1,5,Popular strategy game. Requires internet but minimal privacy complaints,low,low
+Duolingo,com.duolingo,Education,INTERNET,8,0,0,Excellent learning app. Users trust its data handling.,low,low
+Khan Academy,org.khanacademy.android,Education,"INTERNET, GET_ACCOUNTS",12,1,4,Educational and safe. Minimal privacy concerns.,low,low
+Truecaller,com.truecaller,Communication,"READ_CALL_LOG, READ_SMS, READ_CONTACTS, CALL_PHONE",20,0,4,Helpful for identifying unknown calls. Some users are uncomfortable with contact data access.,high,high
+Netflix,com.netflix.mediaclient,Entertainment,READ_PHONE_STATE,18,0,1,Smooth streaming experience. Users generally trust the platform.,low,low
+Spotify,com.spotify.music,Music & Audio,READ_PHONE_STATE,20,0,1,Great music app with personalized recommendations. Some mention data tracking for ads,medium,medium
+Nike Run Club,com.nike.plusgo,Health & Fitness,"ACCESS_FINE_LOCATION, READ_CONTACTS, BLUETOOTH",25,1,7,Good fitness tracking app. Requires location access during workouts.,medium,medium
+Adobe Photoshop Express,com.adobe.psmobile,Photography,"READ_EXTERNAL_STORAGE, WRITE_EXTERNAL_STORAGE, CAMERA",30,0,2,Easy photo editing. No major privacy complaints.,low,low
+Microsoft Word,com.microsoft.office.word,Productivity,"READ_EXTERNAL_STORAGE, WRITE_EXTERNAL_STORAGE",28,0,2,Reliable document editor. Trusted by most users.,low,low
+Google Chrome,com.android.chrome,Tools,"ACCESS_FINE_LOCATION, CAMERA, RECORD_AUDIO, GET_ACCOUNTS",45,0,2,Fast browsing experience. Some users worry about browsing data tracking.,medium,medium
+Calculator,com.google.android.calculator,Utility,VIBRATE,3,0,0,Basic and safe utility app. No privacy concerns.,low,no
+UC Browser,com.UCMobile.intl,Tools,"READ_CONTACTS, READ_SMS, READ_EXTERNAL_STORAGE",40,1,9,Lightweight browser. Some users report privacy and security concerns.,high,high
+Xender,com.xender.io,Tools,"READ_CONTACTS, ACCESS_FINE_LOCATION, CAMERA",50,1,10,Quick file sharing tool. Users sometimes report intrusive ads and excessive permissions.,high,high
+Gboard,com.google.android.inputmethod.latin,Utility,"RECORD_AUDIO, READ_CONTACTS",22,0,2,Smooth keyboard experience. Some users worry about typing data privacy.,medium,medium
+Google Photos,com.google.android.apps.photos,Photography,"READ_EXTERNAL_STORAGE, ACCESS_FINE_LOCATION",28,0,1,Great backup and photo management. Users trust cloud storage but are cautious about data syncing.,medium,medium
+PayPal,com.paypal.android.p2p,Finance,"READ_CONTACTS, NFC",20,0,2,Secure online payments. Generally trusted globally.,low,high
+My Safaricom,com.safaricom.mysafaricom,Utility,READ_PHONE_STATE,15,0,1,Useful telecom management app. Some users mention frequent promotional notifications,medium,medium
+Call of Duty Mobile,com.activision.callofduty.shooter,Gaming,"READ_EXTERNAL_STORAGE, RECORD_AUDIO",30,0,3,High-quality gameplay. Requires microphone and network access,medium,medium
+Fitbit,com.fitbit.FitbitMobile,Health & Fitness,"ACCESS_FINE_LOCATION, BLUETOOTH",25,0,1,Good health tracking. Requires access to personal health data.,medium,medium
+Google Drive,com.google.android.apps.docs,Productivity,"READ_EXTERNAL_STORAGE, GET_ACCOUNTS",18,0,1,Reliable cloud storage. Trusted for file backups.,low,medium
+CamScanner,com.intsig.camscanner,Productivity,"CAMERA, READ_EXTERNAL_STORAGE, READ_CONTACTS",35,1,8,Convenient document scanner. Past privacy concerns were reported by some users.,high,high
+Weather Live,com.apalon.weatherlive,Weather,"ACCESS_FINE_LOCATION, READ_PHONE_STATE",15,0,3,Accurate weather updates. Requires location access.,medium,medium
+Kenya Power,com.kenyapower.billingapp,Utility,"CAMERA, READ_EXTERNAL_STORAGE",10,0,2,Useful for checking bills. Some users report login delays.,low,low
+Safaricom M-Pesa,com.safaricom.mpesa.live,Finance,"ACCESS_FINE_LOCATION, READ_CONTACTS, SEND_SMS",25,0,2,Fast money transfers. Users trust it but remain cautious about transaction security.,medium,high
+Nairobi Connect,com.nairobi.connect,Local,"ACCESS_FINE_LOCATION, READ_CONTACTS",12,1,7,Helpful for local services. Limited privacy complaints.,low,low
+Nairobi Traffic,com.nairobi.traffic.live,Local,ACCESS_FINE_LOCATION,8,0,1,Useful traffic updates. Requires constant GPS access.,medium,medium
+Soko,com.soko.app,Shopping,"CAMERA, ACCESS_FINE_LOCATION",15,0,2,Simple shopping experience. Limited user complaints.,low,low
+Tusky,com.tusky.app,Local,"ACCESS_FINE_LOCATION, CAMERA",10,0,1,Retail app with moderate functionality. Some users report app slowdown,low,low
+Nairobi Now,com.nairobinow.app,Local,ACCESS_FINE_LOCATION,7,0,0,Local updates app. Minimal privacy concerns.,low,low
+Kenya Gazette,com.kenya.gazette,News,INTERNET,5,0,0,Information-based app. Safe and minimal permissions.,low,no
+The Star,com.thestar.news,News,"INTERNET, READ_PHONE_STATE",10,0,1,News app with push notifications. No major privacy issues.,low,low
+BBC News,com.bbc.news.android,News,INTERNET,8,0,0,Trusted international news source. Minimal data collection concerns.,low,low
+Al Jazeera English,net.aljazeera.ajenglish,News,INTERNET,7,0,0,Reliable news updates. Few privacy complaints.,low,low
+Daily Nation,com.nationmedia.dailynation,News,INTERNET,9,0,0,Local news app. Moderate notifications.,low,low
+Pulse Kenya,com.pulse.ke,News,INTERNET,10,0,0,Entertainment news app. Contains ads and tracking.,medium,medium
+The Standard,com.standard.news,News,INTERNET,8,0,0,News platform. Limited privacy concerns.,low,low
+Viusasa,com.viusasa.android,Entertainment,"INTERNET, READ_PHONE_STATE",15,0,1,Streaming and entertainment content. Requires account login.,medium,medium
+Showmax,com.showmax.android,Entertainment,INTERNET,12,0,0,Video streaming platform. Generally trusted.,low,low
+MyDawa,com.mydawa.app,Health & Fitness,"ACCESS_FINE_LOCATION, CAMERA, READ_PHONE_STATE",20,0,2,Online pharmacy app. Requires personal and health information.,medium,high
+Kenya Red Cross,com.redcross.kenya,Health & Fitness,"ACCESS_FINE_LOCATION, READ_CONTACTS",15,0,1,Emergency services app. Requests location during emergencies.,low,low
+Kili,com.kili.africa,Finance,"READ_CONTACTS, READ_SMS",28,1,7,Loan service app. Users mention frequent reminders.,high,high
+Pesapal,com.pesapal.app,Finance,"READ_PHONE_STATE, NFC",18,0,1,Secure online payments. Trusted by businesses.,low,high
+M-Shwari,com.cbagroup.mshwari,Finance,"READ_SMS, READ_PHONE_STATE",15,0,2,Savings and loan service. Requires financial data access.,medium,high
+Eazzy Banking,com.equitybank.eazzybanking,Finance,"READ_CONTACTS, READ_SMS",25,1,6,Secure mobile banking. Users trust its verification system.,low,high
+MySafaricom,com.safaricom.my,Utility,READ_PHONE_STATE,10,0,1,Telecom service management. Some promotional notifications.,medium,medium
+Nairobi City Water,com.nairobi.water,Utility,"CAMERA, INTERNET",12,0,2,Utility billing app. Minimal privacy complaints.,low,low
+Kenya Power & Lighting,com.kplc.bill,Utility,CAMERA,8,0,1,Electricity management app. Standard account permissions.,low,low
+Paytm,com.one97.paytm,Finance,"READ_CONTACTS, ACCESS_FINE_LOCATION, READ_SMS",30,1,8,Popular UPI payments app. Some users mention data tracking concerns.,high,high
+PhonePe,com.phonepe.app,Finance,"READ_CONTACTS, READ_SMS, ACCESS_FINE_LOCATION",28,1,7,Easy payments app. Users trust it but it accesses SMS for transactions.,medium,high
+Google Pay,com.google.android.apps.nbu.paisa.user,Finance,"READ_CONTACTS, READ_SMS",25,0,3,Secure UPI app. Trusted but requires SMS access.,low,medium
+BHIM,com.npci.upiapp,Finance,"READ_SMS, READ_CONTACTS",20,0,2,Government UPI app. Minimal privacy concerns.,low,medium
+YONO SBI,com.sbi.lotusintouch,Finance,"READ_SMS, READ_CONTACTS, CAMERA",32,1,8,Banking app. Requires multiple permissions for transactions.,high,high
+HDFC Bank,com.snapwork.hdfc,Finance,"READ_SMS, READ_CONTACTS",30,1,7,Secure banking app. Requires SMS access.,medium,high
+ICICI iMobile,com.csam.icici.bank.imobile,Finance,"READ_SMS, READ_CONTACTS",28,1,7,Trusted banking app. Moderate permissions usage.,medium,high
+Axis Mobile,com.axis.mobile,Finance,"READ_SMS, READ_CONTACTS",27,1,6,Banking app with verification access.,medium,high
+Flipkart,com.flipkart.android,Shopping,"ACCESS_FINE_LOCATION, CAMERA, READ_EXTERNAL_STORAGE",30,1,5,Popular shopping app. Moderate tracking.,medium,medium
+Myntra,com.myntra.android,Shopping,"ACCESS_FINE_LOCATION, CAMERA",28,0,4,Fashion shopping app. Some tracking features.,medium,medium
+Meesho,com.meesho.supply,Shopping,"READ_CONTACTS, ACCESS_FINE_LOCATION",25,0,5,Budget shopping app. Moderate permissions.,medium,medium
+Zomato,com.application.zomato,Food,"ACCESS_FINE_LOCATION, READ_CONTACTS",30,1,6,Food delivery app. Requires location tracking.,medium,high
+Swiggy,in.swiggy.android,Food,"ACCESS_FINE_LOCATION, READ_CONTACTS",32,1,6,Fast delivery app. Needs location and contacts.,medium,high
+Ola,com.olacabs.customer,Transportation,"ACCESS_FINE_LOCATION, READ_CONTACTS",28,1,5,Ride booking app. Requires location.,medium,high
+Rapido,com.rapido.passenger,Transportation,ACCESS_FINE_LOCATION,25,0,4,Bike taxi app. Location-based service.,medium,medium
+Hotstar,in.startv.hotstar,Entertainment,READ_PHONE_STATE,20,0,2,Streaming app. Trusted platform.,low,low
+JioCinema,com.jio.media.jiocinema,Entertainment,INTERNET,15,0,1,Free streaming app. Minimal concerns.,low,low
+MX Player,com.mxtech.videoplayer.ad,Entertainment,READ_EXTERNAL_STORAGE,18,0,3,Video player. Some ads and tracking.,medium,medium
+ShareChat,in.mohalla.sharechat,Social,"READ_CONTACTS, CAMERA, RECORD_AUDIO",45,1,8,Popular Indian social app. Privacy concerns reported.,high,high
+Moj,com.moj.video,Social,"CAMERA, RECORD_AUDIO",40,1,7,Short video app. Tracks user behavior.,high,high
+Byju's,com.byjus.thelearningapp,Education,"INTERNET, READ_PHONE_STATE",25,0,4,E-learning app. Some data tracking.,medium,medium
+Unacademy,com.unacademyapp,"INTERNET, READ_PHONE_STATE",22,0,3,Learning app. Minimal privacy issues.,low,low,
+IRCTC Rail Connect,cris.org.in.ima,Food,"READ_SMS, READ_CONTACTS",30,1,6,Railway booking app. Requires personal data.,medium,high
+Aarogya Setu,nic.goi.aarogyasetu,Health & Fitness,"ACCESS_FINE_LOCATION, BLUETOOTH",35,1,7,Health tracking app. Uses location and Bluetooth.,high,high
+JioMart,com.jiomart.app,Shopping,"ACCESS_FINE_LOCATION, READ_CONTACTS",28,0,4,Grocery app. Moderate permissions.,medium,medium
+BigBasket,com.bigbasket.mobileapp,Shopping,ACCESS_FINE_LOCATION,26,0,4,Grocery delivery app. Location-based.,medium,medium
+Groww,com.nextbillion.groww,Finance,"READ_CONTACTS, ACCESS_FINE_LOCATION",28,1,7,Popular investment app. Users trust it but it tracks financial behavior.,medium,high
+Zerodha Kite,com.zerodha.kite3,Finance,"READ_SMS, READ_CONTACTS",26,1,6,Stock trading app. Requires OTP access.,medium,high
+Angel One,com.msf.angelmobile,Finance,"READ_SMS, READ_CONTACTS",27,1,6,Trading app. Moderate data usage.,medium,high
+Upstox,com.upstox.app,Finance,"READ_SMS, READ_CONTACTS",25,1,5,Investment app. Requires verification data.,medium,high
+CRED,com.dreamplug.androidapp,Finance,"READ_CONTACTS, READ_SMS",30,1,7,Credit card payment app. Tracks spending habits.,high,high
+Freecharge,com.freecharge.android,Finance,"READ_CONTACTS, ACCESS_FINE_LOCATION",26,1,6,Digital payments app. Moderate permissions.,medium,high
+JioSaavn,com.jio.media.jiobeats,Music & Audio,READ_PHONE_STATE,18,0,1,Music streaming app. Minimal risk.,low,low
+Gaana,com.gaana,Music & Audio,READ_PHONE_STATE,20,0,2,Music app with ads and tracking.,medium,medium
+Telegram X,org.thunderdog.challegram,Communication,"READ_CONTACTS, CAMERA",30,0,1,Lightweight Telegram version. Privacy-focused.,low,low
+Discord,com.discord,Communication,"READ_CONTACTS, RECORD_AUDIO",35,0,2,Chat app for communities. Some data tracking.,medium,medium
+ShareIt,com.lenovo.anyshare.gps,Tools,"READ_CONTACTS, ACCESS_FINE_LOCATION, STORAGE",50,1,10,File sharing app. High privacy concerns.,high,high
+Files by Google,com.google.android.apps.nbu.files,Tools,READ_EXTERNAL_STORAGE,15,0,1,File manager app. Safe and minimal.,low,low
+True Balance,com.balancehero.truebalance,Finance,"READ_SMS, READ_CONTACTS",28,1,8,Loan and balance app. Accesses financial data.,high,high
+LazyPay,com.lazypay,Finance,"READ_SMS, READ_CONTACTS",27,1,7,Credit app. Tracks transactions.,high,high
+Nykaa,com.fsn.nykaa,Shopping,"ACCESS_FINE_LOCATION, CAMERA",25,0,4,Beauty shopping app. Moderate tracking.,medium,medium
+AJIO,com.ril.ajio,Shopping,ACCESS_FINE_LOCATION,24,0,4,Fashion app. Some tracking features.,medium,medium
+Dunzo,com.dunzo.user,Food,"ACCESS_FINE_LOCATION, READ_CONTACTS",30,1,6,Delivery app. Needs location access.,medium,high
+Zepto,com.zepto.app,Food,ACCESS_FINE_LOCATION,28,0,5,Quick grocery delivery. Location-based.,medium,medium
+Blinkit,com.grofers.customerapp,Food,ACCESS_FINE_LOCATION,30,0,5,Grocery delivery app. Tracks location.,medium,medium
+RedBus,in.redbus.android,Transportation,"ACCESS_FINE_LOCATION, READ_CONTACTS",25,0,4,Bus booking app. Moderate data use.,medium,medium
+MakeMyTrip,com.makemytrip,Travel,"ACCESS_FINE_LOCATION, READ_CONTACTS",30,1,6,Travel booking app. Requires personal data.,medium,high
+BookMyShow,com.bt.bms,Entertainment,"READ_CONTACTS, ACCESS_FINE_LOCATION",28,0,4,Ticket booking app. Moderate permissions.,medium,medium
+SonyLIV,com.sonyliv,Entertainment,INTERNET,18,0,2,Streaming app. Low risk.,low,low
+Ludo King,com.ludo.king,Gaming,INTERNET,10,0,1,Casual game. Minimal permissions.,low,low
+BGMI,com.pubg.imobile,Gaming,"RECORD_AUDIO, STORAGE",35,1,6,Popular game. Uses microphone and storage.,medium,medium
+Vedantu,com.vedantu.student,Education,"INTERNET, CAMERA",25,0,4,Online learning app. Moderate permissions.,medium,medium
+Toppr,com.toppr.student,Education,INTERNET,20,0,3,Learning app. Low risk.,low,low
+Airtel Thanks,com.myairtelapp,Utility,"READ_PHONE_STATE, ACCESS_FINE_LOCATION",25,0,4,Telecom app. Some tracking.,medium,medium
+JioTV,com.jio.jioplay.tv,Entertainment,INTERNET,15,0,1,Live TV app. Minimal concerns.,low,low
+Google Files Go,com.google.android.apps.files,Tools,READ_EXTERNAL_STORAGE,15,0,1,File cleaner app. Safe.,low,low
+Cleaner,com.cleaner.app,Tools,"READ_CONTACTS, STORAGE",30,1,8,Cleaning app. Often over-permissioned.,high,high
+LinkedIn,com.linkedin.android,Social,"READ_CONTACTS, ACCESS_FINE_LOCATION",30,0,4,Professional networking app. Some tracking for recommendations.,medium,medium
+Reddit,com.reddit.frontpage,Social,READ_CONTACTS,25,0,3,Community discussion platform. Moderate data tracking.,medium,medium
+Quora,com.quora.android,Social,READ_CONTACTS,24,0,3,Q&A platform. Tracks user interests.,medium,medium
+Google Meet,com.google.android.apps.meet,Communication,"RECORD_AUDIO, CAMERA",28,0,2,Video calling app. Trusted but requires camera and mic.,low,medium
+Zoom,us.zoom.videomeetings,Communication,"CAMERA, RECORD_AUDIO",30,0,3,Online meetings app. Some security concerns reported earlier.,medium,medium
+Google Docs,com.google.android.apps.docs.editors.docs,Productivity,READ_EXTERNAL_STORAGE,20,0,1,Document editor. Minimal privacy concerns.,low,low
+Google Sheets,com.google.android.apps.docs.editors.sheets,Productivity,READ_EXTERNAL_STORAGE,20,0,1,Spreadsheet editor. Safe usage.,low,low
+Google Slides,com.google.android.apps.docs.editors.slides,Productivity,READ_EXTERNAL_STORAGE,20,0,1,Presentation app. Minimal data access.,low,low
+Notion,notion.id,Productivity,INTERNET,15,0,1,Productivity tool. Minimal tracking.,low,low
+Evernote,com.evernote,Productivity,READ_EXTERNAL_STORAGE,22,0,2,Note-taking app. Moderate permissions.,low,medium
+Canva,com.canva.editor,Photography,"CAMERA, STORAGE",30,0,3,Design app. Some data tracking.,medium,medium
+PicsArt,com.picsart.studio,Photography,"CAMERA, STORAGE",35,1,7,Photo editing app. Ads and tracking present.,high,high
+Snapseed,com.niksoftware.snapseed,Photography,STORAGE,20,0,1,Photo editor. Minimal permissions.,low,low
+Amazon Prime Video,com.amazon.avod.thirdpartyclient,Entertainment,INTERNET,18,0,2,Streaming app. Trusted service.,low,low
+YouTube Music,com.google.android.apps.youtube.music,Music & Audio,READ_PHONE_STATE,18,0,2,Music app. Tracks listening habits.,medium,medium
+MX TakaTak,com.mxtakatak.app,Social,"CAMERA, RECORD_AUDIO",40,1,8,Short video app. Tracks user behavior.,high,high
+WinZO,com.winzo.app,Gaming,INTERNET,20,0,3,Gaming app. Some ads and tracking.,medium,medium
+Dream11,com.dream11.fantasy,Gaming,INTERNET,25,0,4,Fantasy sports app. Uses personal data.,medium,medium
+OLA Driver,com.olacabs.driver,Transportation,ACCESS_FINE_LOCATION,30,1,5,Driver app. Constant location tracking.,medium,high
+Uber Driver,com.ubercab.driver,Transportation,ACCESS_FINE_LOCATION,30,1,5,Driver app. Requires continuous GPS.,medium,high
+Rapido Captain,com.rapido.captain,Transportation,ACCESS_FINE_LOCATION,28,1,5,Bike driver app. Tracks location.,medium,high
+BigBasket Seller,com.bigbasket.seller,Shopping,ACCESS_FINE_LOCATION,25,0,4,Seller app. Moderate permissions.,medium,medium
+Tata Neu,com.tatadigital.tataneu,Shopping,"ACCESS_FINE_LOCATION, READ_CONTACTS",28,0,5,Super app. Tracks multiple services.,medium,medium
+Phone Cleaner,com.phone.cleaner.app,Tools,"READ_CONTACTS, STORAGE",35,1,9,Cleaner app. Often over-permissioned.,high,high
+Antivirus,com.antivirus.security,Tools,"READ_CONTACTS, STORAGE",40,1,8,Security app. Accesses many files.,high,high
+Google Assistant,com.google.android.googlequicksearchbox,Tools,"RECORD_AUDIO, ACCESS_FINE_LOCATION",45,0,3,Voice assistant. Requires continuous listening.,medium,medium
+Microsoft Teams,com.microsoft.teams,Communication,"CAMERA, RECORD_AUDIO",35,0,2,Office communication app. Trusted.,low,medium
+Slack,com.Slack,Communication,READ_CONTACTS,30,0,2,Work chat app. Moderate data usage.,low,medium
+Coursera,org.coursera.android,Education,INTERNET,20,0,2,Learning platform. Safe.,low,low
+Udemy,com.udemy.android,Education,INTERNET,20,0,2,E-learning app. Minimal concerns.,low,low
+Airtel Xstream,com.airtel.xstream,Entertainment,INTERNET,18,0,2,Streaming app. Low risk.,low,low
+Gaana Plus,com.gaana.plus,Music & Audio,READ_PHONE_STATE,20,0,2,Music app. Moderate tracking.,medium,medium
+Google Calendar,com.google.android.calendar,Productivity,READ_CONTACTS,20,0,1,Calendar app. Minimal risk.,low,low
+Microsoft Excel,com.microsoft.office.excel,Productivity,STORAGE,25,0,2,Spreadsheet app. Trusted.,low,low
+PowerPoint,com.microsoft.office.powerpoint,Productivity,STORAGE,25,0,2,Presentation app. Safe.,low,low
+OneDrive,com.microsoft.skydrive,Productivity,STORAGE,20,0,1,Cloud storage. Trusted.,low,medium
+Dropbox,com.dropbox.android,Productivity,STORAGE,22,0,2,File storage app. Moderate permissions.,low,medium
+Google Keep,com.google.android.keep,Productivity,INTERNET,15,0,1,Note app. Safe.,low,low
+Koo,com.koo.app,Social,READ_CONTACTS,30,1,7,Indian social app. Some tracking.,high,high
+ShareChat Lite,in.mohalla.sharechat.lite,Social,READ_CONTACTS,35,1,7,Lite version. Still tracks data.,high,high
+Josh,com.josh.video,Social,"CAMERA, RECORD_AUDIO",40,1,8,Short video app. High tracking.,high,high
+InShorts,com.nis.app,News,INTERNET,10,0,1,News summary app. Safe.,low,low
+DailyHunt,com.eterno,News,INTERNET,12,0,2,News app. Some tracking.,medium,medium
+OLX,com.olx.southasia,Shopping,ACCESS_FINE_LOCATION,25,0,4,Marketplace app. Moderate permissions.,medium,medium
+Quikr,com.quikr,Shopping,ACCESS_FINE_LOCATION,25,0,4,Classifieds app. Some tracking.,medium,medium
+Zee5,com.zee5.app,Entertainment,INTERNET,18,0,2,Streaming app. Safe.,low,low
+ALTBalaji,com.altbalaji,Entertainment,INTERNET,18,0,2,Streaming app. Moderate tracking.,medium,medium
+Pocket,com.ideashower.readitlater.pro,Productivity,INTERNET,15,0,1,Read later app. Minimal risk.,low,low
+Truecaller Business,com.truecaller.business,Communication,"READ_CALL_LOG, READ_CONTACTS",30,1,7,Business caller ID app. Accesses contacts.,high,high
+Google Lens,com.google.ar.lens,Tools,CAMERA,20,0,1,Image recognition tool. Safe.,low,low
+Hotstar Kids,in.hotstar.kids,Entertainment,INTERNET,15,0,1,Kids streaming app. Low risk.,low,low
+HealthifyMe,com.healthifyme.basic,Health & Fitness,ACCESS_FINE_LOCATION,25,0,4,Fitness app. Tracks health data.,medium,medium
+Cult Fit,com.cultfit,"CAMERA, ACCESS_FINE_LOCATION",28,0,4,Fitness app. Moderate permissions.,medium,medium,
+Apollo 247,com.apollo247,Health & Fitness,"READ_CONTACTS, ACCESS_FINE_LOCATION",30,1,6,Healthcare app. Handles sensitive data.,medium,high
+Practo,com.practo.fabric,Health & Fitness,"READ_CONTACTS, ACCESS_FINE_LOCATION",28,1,6,Medical app. Uses personal data.,medium,high
+Google Pay Business,com.google.android.apps.nbu.paisa.business,Finance,"READ_SMS, READ_CONTACTS",28,1,6,Business payments app. Tracks transactions.,medium,high
+Amazon Seller,com.amazon.sellermobile.android,Shopping,ACCESS_FINE_LOCATION,28,0,5,Seller app. Moderate permissions.,medium,medium
