@@ -1,13 +1,15 @@
 from flask import Flask, render_template, request
 import pandas as pd
+import os
 
 app = Flask(__name__)
 
-# ---------------- LOAD DATA ----------------
-data = pd.read_csv("dataset.csv")
+# ---------------- LOAD DATA (FIXED FOR RENDER) ----------------
+file_path = os.path.join(os.path.dirname(__file__), "dataset.csv")
+data = pd.read_csv(file_path)
 data.columns = data.columns.str.strip()
 
-# Convert to numeric safely
+# Convert safely
 data["Privacy_Risk_Score"] = pd.to_numeric(
     data["Privacy_Risk_Score"], errors="coerce"
 )
@@ -220,4 +222,4 @@ def myapps():
 
 # ---------------- RUN SERVER ----------------
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
