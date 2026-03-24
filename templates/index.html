@@ -1,132 +1,152 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Mobile Application Risk Analysis</title>
-
+<title>Mobile Risk Analyzer</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Icons -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
 <style>
 
 /* BODY */
 body{
-    font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(135deg, #2c3e50, #4ca1af);
     margin:0;
-    color:#333;
+    font-family:'Segoe UI', sans-serif;
+    background:#f4f7fb;
+    display:flex;
 }
 
-/* NAVBAR */
-.navbar{
-    position:sticky;
-    top:0;
-    background: rgba(44, 62, 80, 0.9);
-    padding:15px;
-    backdrop-filter: blur(10px);
-    text-align:center;
+/* SIDEBAR */
+.sidebar{
+    width:230px;
+    height:100vh;
+    background:#1e293b;
+    color:white;
+    position:fixed;
+    padding:20px;
 }
 
-.navbar a{
+.sidebar h2{
+    margin-bottom:30px;
+    font-size:20px;
+}
+
+.sidebar a{
+    display:block;
+    padding:12px;
+    margin:10px 0;
     color:white;
     text-decoration:none;
-    margin:0 20px;
-    font-weight:500;
+    border-radius:8px;
     transition:0.3s;
 }
 
-.navbar a:hover{
-    color:#00d4ff;
+.sidebar a:hover{
+    background:#3b82f6;
 }
 
-/* MAIN CONTAINER (FIXED) */
-.container{
-    width:90%;
-    max-width:500px;
-    margin:40px auto;
-    background: rgba(255,255,255,0.95);
-    padding:25px;
+/* MAIN CONTENT */
+.main{
+    margin-left:250px;
+    width:100%;
+    padding:30px;
+}
+
+/* HEADER */
+.header{
+    font-size:24px;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+/* CARD */
+.card{
+    background:white;
+    padding:30px;
     border-radius:15px;
-    box-shadow:0 8px 25px rgba(0,0,0,0.2);
-    backdrop-filter: blur(10px);
+    box-shadow:0 8px 25px rgba(0,0,0,0.1);
+    max-width:500px;
+    margin:auto;
     text-align:center;
+    position:relative;
 }
 
-/* INPUTS */
+/* INPUT */
 input{
     width:100%;
     padding:12px;
+    margin-top:15px;
     border-radius:8px;
     border:1px solid #ccc;
-    outline:none;
-    margin-top:10px;
 }
 
 /* BUTTON */
 button{
     width:100%;
     padding:12px;
-    margin-top:15px;
-    background: linear-gradient(45deg, #007bff, #00c6ff);
+    margin-top:20px;
+    background:#3b82f6;
     color:white;
     border:none;
     border-radius:8px;
     cursor:pointer;
+    font-size:16px;
     transition:0.3s;
 }
 
 button:hover{
-    transform:scale(1.05);
+    background:#2563eb;
 }
 
-/* RESULT TEXT */
-h2, h3, p{
-    margin-top:15px;
-}
-
-/* TABLE */
-table{
+/* AUTOCOMPLETE */
+.suggestions{
+    list-style:none;
+    padding:0;
+    margin:0;
+    background:white;
+    border:1px solid #ccc;
+    position:absolute;
     width:100%;
-    margin-top:20px;
-    border-collapse:collapse;
+    max-height:150px;
+    overflow-y:auto;
+    z-index:1000;
+    text-align:left;
 }
 
-th{
-    background:#2c3e50;
-    color:white;
-    padding:12px;
-}
-
-td{
+.suggestions li{
     padding:10px;
-    border-bottom:1px solid #ddd;
+    cursor:pointer;
+}
+
+.suggestions li:hover{
+    background:#f0f0f0;
+}
+
+/* RESULT */
+.result{
+    margin-top:20px;
 }
 
 /* RISK COLORS */
-.high{color:#e74c3c;}
-.medium{color:#f39c12;}
-.low{color:#27ae60;}
+.low{color:#22c55e;}
+.medium{color:#f59e0b;}
+.high{color:#ef4444;}
 
-/* MOBILE RESPONSIVE */
-@media (max-width: 600px){
-
-    .navbar{
-        display:flex;
-        flex-wrap:wrap;
-        justify-content:center;
+/* MOBILE */
+@media(max-width:768px){
+    body{
+        flex-direction:column;
     }
 
-    .navbar a{
-        margin:8px;
-        font-size:14px;
+    .sidebar{
+        width:100%;
+        height:auto;
+        position:relative;
     }
 
-    .container{
-        width:95%;
-        margin:20px auto;
-        padding:20px;
-    }
-
-    h2{
-        font-size:20px;
+    .main{
+        margin-left:0;
     }
 }
 
@@ -135,28 +155,47 @@ td{
 
 <body>
 
-<div class="navbar">
-<a href="/">Home</a>
-<a href="/myapps">My Apps</a>
-<a href="/compare">Compare Apps</a>
-<a href="/dashboard">Dashboard</a>
-<a href="/dataset">Dataset Explorer</a>
+<!-- SIDEBAR -->
+<div class="sidebar">
+    <h2><i class="fa-solid fa-shield-halved"></i> Risk App</h2>
+    <a href="/"><i class="fa fa-home"></i> Home</a>
+    <a href="/myapps"><i class="fa fa-mobile"></i> My Apps</a>
+    <a href="/compare"><i class="fa fa-chart-bar"></i> Compare</a>
+    <a href="/dashboard"><i class="fa fa-chart-pie"></i> Dashboard</a>
+    <a href="/dataset"><i class="fa fa-database"></i> Dataset</a>
 </div>
 
-<div class="container">
+<!-- MAIN -->
+<div class="main">
 
-<h2>Mobile Application Risk Analysis System</h2>
+<div class="header">
+    Mobile Application Risk Analysis System
+</div>
+
+<div class="card">
+
+<h2>Analyze Your App</h2>
 
 <form method="POST">
-<input type="text" name="app_name" placeholder="Enter App Name" required>
-<button type="submit">Analyze Risk</button>
+
+<div style="position:relative;">
+<input type="text" id="appInput" name="app_name" placeholder="Enter App Name" required onkeyup="showSuggestions()">
+<ul id="suggestions" class="suggestions"></ul>
+</div>
+
+<button type="submit">
+<i class="fa fa-search"></i> Analyze Risk
+</button>
+
 </form>
 
 {% if percentage %}
+<div class="result">
 <h3>{{app_name}}</h3>
 <h2 class="{{level|lower}}">Risk: {{level}}</h2>
 <p>{{percentage}}%</p>
 <p>{{description}}</p>
+</div>
 {% endif %}
 
 {% if error %}
@@ -164,6 +203,42 @@ td{
 {% endif %}
 
 </div>
+
+</div>
+
+<!-- AUTOCOMPLETE SCRIPT -->
+<script>
+
+const apps = [
+    "WhatsApp","Waze","Weather App","Facebook","Instagram",
+    "Snapchat","Telegram","YouTube","Google Maps","Twitter",
+    "Amazon","Flipkart","PhonePe","Paytm"
+];
+
+function showSuggestions(){
+    let input = document.getElementById("appInput").value.toLowerCase();
+    let box = document.getElementById("suggestions");
+
+    box.innerHTML = "";
+
+    if(input === "") return;
+
+    let filtered = apps.filter(app => app.toLowerCase().startsWith(input));
+
+    filtered.forEach(app => {
+        let li = document.createElement("li");
+        li.textContent = app;
+
+        li.onclick = function(){
+            document.getElementById("appInput").value = app;
+            box.innerHTML = "";
+        };
+
+        box.appendChild(li);
+    });
+}
+
+</script>
 
 </body>
 </html>
