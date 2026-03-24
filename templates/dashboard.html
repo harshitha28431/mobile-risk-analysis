@@ -4,144 +4,173 @@
 
 <title>Application Risk Dashboard</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<!-- Icons -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
 <style>
 
 /* BODY */
 body{
-    font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(135deg, #2c3e50, #4ca1af);
     margin:0;
-    color:#333;
+    font-family:'Segoe UI', sans-serif;
+    background:#f4f7fb;
+    display:flex;
 }
 
-/* NAVBAR */
-.navbar{
-    position:sticky;
-    top:0;
-    background: rgba(44, 62, 80, 0.9);
-    padding:15px;
-    backdrop-filter: blur(10px);
-    text-align:center;
+/* SIDEBAR */
+.sidebar{
+    width:230px;
+    height:100vh;
+    background:#1e293b;
+    color:white;
+    position:fixed;
+    padding:20px;
 }
 
-.navbar a{
+.sidebar h2{
+    margin-bottom:30px;
+}
+
+.sidebar a{
+    display:block;
+    padding:12px;
+    margin:10px 0;
     color:white;
     text-decoration:none;
-    margin:0 20px;
-    font-weight:500;
-    transition:0.3s;
+    border-radius:8px;
 }
 
-.navbar a:hover{
-    color:#00d4ff;
+.sidebar a:hover{
+    background:#3b82f6;
 }
 
-/* CONTAINER (FIXED) */
-.container{
-    width:90%;
-    max-width:900px;
-    margin:40px auto;
-    background: rgba(255,255,255,0.95);
-    padding:25px;
-    border-radius:15px;
-    box-shadow:0 8px 25px rgba(0,0,0,0.2);
-    backdrop-filter: blur(10px);
-    text-align:center;
+/* MAIN */
+.main{
+    margin-left:250px;
+    width:100%;
+    padding:30px;
 }
 
-/* STATS CARDS */
+/* HEADER */
+.header{
+    font-size:26px;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+/* STATS GRID */
 .stats{
-    display:flex;
-    justify-content:space-around;
-    flex-wrap:wrap;
-    margin-top:20px;
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px,1fr));
+    gap:20px;
 }
 
+/* CARD */
 .card{
-    flex:1 1 150px;
-    margin:10px;
     padding:20px;
-    border-radius:12px;
+    border-radius:15px;
     color:white;
     font-weight:bold;
-    font-size:18px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
 }
 
-.high{background:#e74c3c;}
-.medium{background:#f39c12;}
-.low{background:#27ae60;}
+.card i{
+    font-size:30px;
+}
+
+.high{background:#ef4444;}
+.medium{background:#f59e0b;}
+.low{background:#22c55e;}
+
+/* CHART CARD */
+.chart-card{
+    margin-top:30px;
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
 
 /* CHART */
 .chart-container{
-    width:100%;
     max-width:400px;
-    height:300px;
-    margin:30px auto;
+    margin:auto;
 }
 
 /* MOBILE */
-@media (max-width: 600px){
+@media(max-width:768px){
+    body{flex-direction:column;}
 
-    .navbar{
-        display:flex;
-        flex-wrap:wrap;
-        justify-content:center;
+    .sidebar{
+        width:100%;
+        height:auto;
+        position:relative;
     }
 
-    .navbar a{
-        margin:8px;
-        font-size:14px;
-    }
-
-    .container{
-        width:95%;
-        margin:20px auto;
-        padding:20px;
-    }
-
-    .card{
-        font-size:16px;
-        padding:15px;
+    .main{
+        margin-left:0;
     }
 }
 
 </style>
+
 </head>
 
 <body>
 
-<div class="navbar">
-<a href="/">Home</a>
-<a href="/myapps">My Apps</a>
-<a href="/compare">Compare Apps</a>
-<a href="/dashboard">Dashboard</a>
-<a href="/dataset">Dataset Explorer</a>
+<!-- SIDEBAR -->
+<div class="sidebar">
+    <h2><i class="fa-solid fa-shield-halved"></i> Risk App</h2>
+    <a href="/"><i class="fa fa-home"></i> Home</a>
+    <a href="/myapps"><i class="fa fa-mobile"></i> My Apps</a>
+    <a href="/compare"><i class="fa fa-chart-bar"></i> Compare</a>
+    <a href="/dashboard"><i class="fa fa-chart-pie"></i> Dashboard</a>
+    <a href="/dataset"><i class="fa fa-database"></i> Dataset</a>
 </div>
 
-<div class="container">
+<!-- MAIN -->
+<div class="main">
 
-<h1>Application Risk Dashboard</h1>
+<div class="header">📊 Application Risk Dashboard</div>
 
+<!-- STATS -->
 <div class="stats">
 
 <div class="card high">
+<div>
 High Risk<br>
 {{high}}
 </div>
+<i class="fa fa-exclamation-triangle"></i>
+</div>
 
 <div class="card medium">
+<div>
 Medium Risk<br>
 {{medium}}
 </div>
+<i class="fa fa-exclamation-circle"></i>
+</div>
 
 <div class="card low">
+<div>
 Low Risk<br>
 {{low}}
 </div>
+<i class="fa fa-check-circle"></i>
+</div>
 
 </div>
+
+<!-- CHART -->
+<div class="chart-card">
+
+<h3 style="text-align:center;">Risk Distribution</h3>
 
 <div class="chart-container">
 <canvas id="riskChart"></canvas>
@@ -149,30 +178,27 @@ Low Risk<br>
 
 </div>
 
+</div>
+
 <script>
 
-const ctx = document.getElementById('riskChart');
-
-new Chart(ctx, {
+new Chart(document.getElementById('riskChart'), {
     type:'pie',
     data:{
         labels:['High Risk','Medium Risk','Low Risk'],
         datasets:[{
             data:[{{high}}, {{medium}}, {{low}}],
             backgroundColor:[
-                '#e74c3c',
-                '#f39c12',
-                '#27ae60'
+                '#ef4444',
+                '#f59e0b',
+                '#22c55e'
             ]
         }]
     },
     options:{
         responsive:true,
-        maintainAspectRatio:false,
         plugins:{
-            legend:{
-                position:'bottom'
-            }
+            legend:{position:'bottom'}
         }
     }
 });
